@@ -8,5 +8,6 @@
 
     <bean name= "customerService" class="service.CustomerServiceImpl">
         <property name="customerHibernate" ref="customerHibernate"/>
+        <!--<constructor-arg index ="0" ref="customerHibernate"/> Constructor-->
     </bean>
 </beans>
