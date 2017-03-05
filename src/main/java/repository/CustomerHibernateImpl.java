@@ -7,6 +7,12 @@ import object.CustomerObject;
  */
 public class CustomerHibernateImpl implements CustomerHibernate {
 
+    String dbUsername;
+
+    public void setDbUsername(final String dbUsername) {
+        this.dbUsername = dbUsername;
+    }
+
     final CustomerObject customer = new CustomerObject();
 
     public void setCustomer(final String firstName) {
@@ -15,6 +21,9 @@ public class CustomerHibernateImpl implements CustomerHibernate {
     }
 
     public String findCustomer() {
+
+        System.out.println(dbUsername);
+
        return customer.getFirstName();
     }
 }
